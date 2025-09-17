@@ -1,0 +1,56 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #111827;
+  color: white;
+  margin: 0;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.game-card {
+  background: #1f2937;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.4);
+}
+
+button {
+  background: #0b2c61;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin: 5px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #6f8ed0;
+}
+
+p {
+  margin-top: 10px;
+}
+
+.leaderboard {
+  background: #1f2937;
+  margin-top: 30px;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.leaderboard ul {
+  list-style: none;
+  padding: 0;
+}
