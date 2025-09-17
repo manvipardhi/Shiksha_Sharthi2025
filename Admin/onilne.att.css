@@ -1,0 +1,149 @@
+ :root {
+    --primary-color: #4CAF50; /* Green for success/present */
+    --secondary-color: #FF5722; /* Orange for warning/absent */
+    --background-color: #f4f7f6;
+    --panel-bg: #ffffff;
+    --text-color: #333;
+    --border-color: #e0e0e0;
+    --card-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.attendance-container {
+    background-color: var(--panel-bg);
+    padding: 30px 40px;
+    border-radius: 20px;
+    box-shadow: var(--card-shadow);
+    width: 100%;
+    max-width: 650px;
+    text-align: center;
+}
+
+.panel-header {
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.panel-title {
+    font-size: 2.2em;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+.date-info {
+    color: #888;
+    font-size: 1.1em;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+.attendance-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 25px;
+}
+
+.attendance-table th, .attendance-table td {
+    padding: 15px;
+    text-align: left;
+}
+
+.attendance-table th {
+    font-weight: 600;
+    border-bottom: 2px solid var(--border-color);
+    color: #666;
+}
+
+.student-row {
+    border-bottom: 1px solid var(--border-color);
+    transition: background-color 0.3s;
+}
+
+.student-row:last-child {
+    border-bottom: none;
+}
+
+.student-row:hover {
+    background-color: #f9f9f9;
+}
+
+.student-col {
+    font-weight: 500;
+}
+
+.status-col {
+    width: 150px;
+}
+
+/* Custom Checkbox as a Toggle Switch */
+.status-checkbox {
+    display: none;
+}
+
+.status-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 40px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    color: #fff;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+}
+
+.status-checkbox:checked + .status-label {
+    background-color: var(--primary-color);
+    box-shadow: 0 4px 10px rgba(76, 175, 80, 0.3);
+}
+
+.status-checkbox:not(:checked) + .status-label {
+    background-color: var(--secondary-color);
+    box-shadow: 0 4px 10px rgba(255, 87, 34, 0.3);
+}
+
+/* Save Button Styling */
+.action-buttons {
+    margin-top: 25px;
+}
+
+.save-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 15px 30px;
+    font-size: 1.1em;
+    font-weight: 600;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+}
+
+.save-button:hover {
+    background-color: #43a047;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+.save-button .icon {
+    font-size: 1.5em;
+}

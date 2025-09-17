@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="indexstyle.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <header class="top-bar">
+        <div class="user-info">
+            <img id="user-avatar" src="images/default-avatar.png" alt="User Avatar" class="avatar">
+            <span id="user-nickname"></span>
+        </div>
+        <div class="points-display">
+            <span class="material-icons">star</span>
+            <span id="user-points">0</span> Points
+        </div>
+    </header>
+
+    <nav class="side-nav">
+        <ul>
+            <li data-page="dashboard"><span class="material-icons">home</span>Dashboard</li>
+            <li data-page="games"><span class="material-icons">school</span>Games</li>
+            <li data-page="leaderboard"><span class="material-icons">leaderboard</span>Leaderboard</li>
+            <li data-page="progress"><span class="material-icons">trending_up</span>Progress</li>
+            <li data-page="profile"><span class="material-icons">person</span>Profile</li>
+            <li data-page="logout"><span class="material-icons">logout</span>Logout</li>
+        </ul>
+    </nav>
+
+    <main id="content">
+        <section id="dashboard" class="page active">
+            <h2>Welcome to Siksha Sarthi</h2>
+            <p>Your current level: <span id="user-level">1</span></p>
+            <div id="progress-bar-container">
+                <div id="progress-bar"></div>
+            </div>
+            <p>Ready to learn? Check out the latest games!</p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

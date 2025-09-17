@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teacher Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="dark">
+
+  <!-- Header -->
+  <header class="header">
+    <div class="title">
+      <h2 >Teacher Dashboard</h2>
+      <p>Teacher User • Mathematics • Government School</p>
+    </div>
+    <div class="user-controls">
+      <button class="profile-btn" > Teacher</button>
+      <button class="logout-btn"> Logout</button>
+      <button class="theme-toggle"><i class="fa-solid fa-toggle-off"></i></button>
+    </div>
+  </header>
+
+  <!-- Welcome -->
+  <section class="welcome">
+    <h3>Good morning, Teacher User! </h3>
+    <p>Your students are making excellent progress. Check their latest achievements below.</p>
+  </section>
+
+  <!-- Cards -->
+  <section class="cards">
+    <div class="card"><h4>85</h4><p>Total Students</p></div>
+    <div class="card"><h4>24</h4><p>Active Quizzes</p></div>
+    <div class="card"><h4>78%</h4><p>Avg Progress</p></div>
+    <div class="card"><h4>74</h4><p>Active Today</p></div>
+  </section>
+
+  <!-- Tabs -->
+  <nav class="tabs">
+    <button class="tab active" onclick="showSection('overview')">Overview</button>
+    <button class="tab" onclick="showSection('students')">Students</button>
+    <button class="tab" onclick="showSection('quizzes')">Quizzes</button>
+    <button class="tab" onclick="window.location.href='games.html'">Games</button>
+    <button class="tab" onclick="showSection('analytics')">Analytics</button>
+  </nav>
+
+  <!-- Sections -->
+  <main>
+    <!-- Overview -->
+    <section id="overview" class="tab-section active"  >
+      <h3 style="text-align: center;color: rgb(81, 222, 222); font-size: larger;">Class Progress</h3>
+      <div class="class-progress">
+        <p>Class 9 - Avg Progress: 74%</p>
+        <div class="progress"><span style="width:74%"></span></div>
+
+        <p>Class 10 - Avg Progress: 78%</p>
+        <div class="progress"><span style="width:78%"></span></div>
+
+        <p>Class 11 - Avg Progress: 71%</p>
+        <div class="progress"><span style="width:71%"></span></div>
+
+        <p>Class 12 - Avg Progress: 82%</p>
+        <div class="progress"><span style="width:82%"></span></div>
+      </div>
+
+      <h3 style="font-size: larger; color: rgb(81, 222, 222) ;text-align: center;">Top Performers</h3>
+      <ul class="performers">
+        <li>Ravi Kumar - 96%</li>
+        <li>Arjun Patel - 94%</li>
+        <li>Priya Sharma - 91%</li>
+        <li>Rahul Sharma - 81%</li>
+      </ul>
+
+      <div class="actions">
+        <button onclick="window.location.href='create-quiz.html'">Create Quiz</button>
+        <button onclick="window.location.href='upload.html'">Upload Content</button>
+        <button onclick="window.location.href='classes.html'">Manage Classes</button>
+        <button onclick="window.location.href='reports.html'">View Reports</button>
+      </div>
+    </section>
+
+    <!-- Students -->
+    <section id="students" class="tab-section">
+      <h3 style=" text-align: center ;font-size: larger; color: rgb(81, 222, 222) ; ">Student Progress</h3>
+      <ul class="student-list">
+        <li><strong>Arjun Patel</strong> (Class 10) - 85% • Last active: Today</li>
+        <li><strong>Priya Sharma</strong> (Class 10) - 78% • Last active: Yesterday</li>
+        <li><strong>Neha Verma</strong> (Class 12) - 82% • Last active: Today</li>
+        <li><strong>Ravi Kumar</strong> (Class 9) - 92% • Last active: 2 Days Ago</li>
+      </ul>
+    </section>
+
+    <!-- Quizzes -->
+    <section id="quizzes" class="tab-section">
+      <h3  style=" text-align: center ;font-size: larger; color: rgb(81, 222, 222) ;" >Recent Quizzes</h3>
+      <div class="quiz-grid">
+        <div class="quiz-card">
+          <h4  style=" text-align: center ;font-size: larger; color: rgb(81, 222, 222) ;">Algebra Basics</h4>
+          <p>Class 9 • Today</p>
+          <p>24 Completed • Avg Score: 78%</p>
+        </div>
+        <div class="quiz-card">
+          <h4 style=" text-align: center ;font-size: larger; color: rgb(81, 222, 222) ;">Quadratic Equations</h4>
+          <p>Class 10 • Yesterday</p>
+          <p>28 Completed • Avg Score: 85%</p>
+        </div>
+        <div class="quiz-card">
+          <h4 style=" text-align: center ;font-size: larger; color: rgb(81, 222, 222) ;">Trigonometry</h4>
+          <p>Class 12 • 2 Days Ago</p>
+          <p>30 Completed • Avg Score: 82%</p>
+        </div>
+        <div class="quiz-card">
+          <h4 style=" text-align: center ;font-size: larger; color: rgb(81, 222, 222) ;">Statistics</h4>
+          <p>Class 11 • 3 Days Ago</p>
+          <p>26 Completed • Avg Score: 76%</p>
+        </div>
+      </div>
+
+      <!-- Same Actions here -->
+      <div class="actions">
+        <button onclick="window.location.href='create-quiz.html'">Create Quiz</button>
+        <button onclick="window.location.href='upload.html'">Upload Content</button>
+        <button onclick="window.location.href='classes.html'">Manage Classes</button>
+        <button onclick="window.location.href='reports.html'">View Reports</button>
+      </div>
+    </section>
+
+    <!-- Analytics -->
+    <section id="analytics" class="tab-section">
+      <h3 style=" text-align: center ;font-size: larger; color: rgb(81, 222, 222) ;">Learning Analytics</h3>
+      <p>Total Quiz Attempts: 1247</p>
+      <p>Avg Completion Rate: 87%</p>
+      <p>Students with 80%+ Scores: 62</p>
+      <p>Active Learning Hours: 342 hrs</p>
+
+      <h3>Subject Performance</h3>
+      <p>Algebra: 85%</p>
+      <div class="progress"><span style="width:85%"></span></div>
+
+      <p>Geometry: 78%</p>
+      <div class="progress"><span style="width:78%"></span></div>
+
+      <p>Statistics: 72%</p>
+      <div class="progress"><span style="width:72%"></span></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

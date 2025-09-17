@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siksha Sarthi - Gamified Learning for Rural India</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Baloo+2:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #4CAF50; /* Fresh Green */
+            --secondary-color: #FFC107; /* Bright Yellow */
+            --accent-color: #2196F3; /* Vibrant Blue */
+            --background-color: #F0F4C3; /* Soft Green-Yellow */
+            --text-color: #333;
+            --light-text-color: #fff;
+            --card-bg: #fff;
+            --box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: var(--light-text-color);
+            padding: 1.5rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: var(--box-shadow);
+        }
+
+        .logo {
+            font-family: 'Baloo 2', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--light-text-color);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--light-text-color);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--secondary-color);
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #8BC34A 100%);
+            color: var(--light-text-color);
+            text-align: center;
+            padding: 8rem 5%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section h1 {
+            font-family: 'Baloo 2', sans-serif;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero-section p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            max-width: 800px;
+            margin: 0 auto 2rem auto;
+        }
+
+        .cta-button {
+            background-color: var(--secondary-color);
+            color: var(--text-color);
+            font-weight: 700;
+            font-size: 1.2rem;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+
+        .features-section {
+            padding: 5rem 5%;
+            text-align: center;
+        }
+
+        .features-section h2, .testimonials-section h2 {
+            font-family: 'Baloo 2', sans-serif;
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 3rem;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background-color: var(--card-bg);
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: var(--box-shadow);
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            text-align: center;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            background-color: #F9FBE7;
+        }
+
+        .feature-card .icon {
+            font-size: 3rem;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+
+        .testimonials-section {
+            background-color: var(--accent-color);
+            color: var(--light-text-color);
+            padding: 5rem 5%;
+            text-align: center;
+        }
+        
+        .testimonials-section h2 {
+            color: var(--light-text-color);
+        }
+
+        .testimonial-carousel {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            background-color: rgba(255, 255, 255, 0.15);
+            padding: 2rem;
+            border-radius: 15px;
+            max-width: 400px;
+            box-shadow: var(--box-shadow);
+            text-align: left;
+        }
+
+        .testimonial-card p {
+            font-style: italic;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-card .author {
+            font-weight: 600;
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: var(--light-text-color);
+            text-align: center;
+            padding: 2rem;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .hero-section h1, .hero-section p, .cta-button {
+            animation: fadeIn 1s ease-out;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Siksha Sarthi</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Features</a></li>
+                 <li><a href="#">Games</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="Contact.html" class="nav-button">Contact</a></li>
+                <li><a href="login11.html" class="nav-button">Login</a></li>
+                <li><a href="register1.html" class="nav-button">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <h1>Empowering Rural India Through Playful Learning Ignite Your Future: Learning for 6th to 12th</h1>
+            <p>Siksha Sarthi makes learning for students in grades 6-12 captivating with **real-world problem-solving**, **career-focused quests**, and a **gamified curriculum** that prepares them for success.</p>
+            <a href="#" class="cta-button">Join the Learning Revolution!</a>
+        </section>
+
+        <section class="features-section">
+            <h2>Key Features for 6th-12th Graders</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="icon">🔬</div>
+                    <h3>Curriculum-Aligned Missions</h3>
+                    <p>Missions and quests designed to cover complex subjects like Science, Math, and Social Studies in an engaging, narrative-driven way.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">🚀</div>
+                    <h3>Career & Skill Quests</h3>
+                    <p>Explore different career paths through interactive modules and skill-building challenges to discover your passion.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">🏆</div>
+                    <h3>Competitive Leaderboards</h3>
+                    <p>Compete with peers, earn ranks, and win virtual awards for academic excellence and timely completion of challenges.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">💬</div>
+                    <h3>Community & Collaboration</h3>
+                    <p>Team up with friends on projects, discuss topics in forums, and get help from tutors and peers in our safe community hub.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="icon">👨‍🏫</div>
+                    <h3>Teacher & Parent Dashboards</h3>
+                    <p>Monitor progress, assign tasks, and celebrate achievements with dedicated dashboards for mentors.</p>
+                </div>
+               
+                <div class="feature-card">
+                    <div class="icon">🗺️</div>
+                    <h3>Personalized Learning Paths</h3>
+                    <p>Tailored content that adapts to each student's pace and curriculum, ensuring effective understanding.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">🎮</div>
+                    <h3>Interactive Gamification</h3>
+                    <p>Earn points, unlock badges, and climb leaderboards with interactive quizzes and educational games.</p>
+                </div>
+                 <div class="feature-card">
+                    <div class="icon">💡</div>
+                    <h3>Offline Accessibility</h3>
+                    <p>Learn anywhere, anytime! Our platform works offline, perfect for areas with limited internet access.</p>
+                </div>
+            </div>
+        </section>
+        <section></section>
+
+        <section class="testimonials-section">
+            <h2>Success Stories</h2>
+            <div class="testimonial-carousel">
+                <div class="testimonial-card">
+                    <p>"Physics was a mystery until I started using Siksha Sarthi. The 'Cosmic Quest' module made complex concepts so simple to understand!"</p>
+                    <div class="author">- Aarav, 11th Grade Student</div>
+                </div>
+                <div class="testimonial-card">
+                    <p>"The career exploration quests helped me decide I want to pursue engineering. It's more than just a learning app; it's a guide."</p>
+                    <div class="author">- Neha, 10th Grade Student</div>
+                </div>
+                <div class="testimonial-card">
+                    <p>"Siksha Sarthi has dramatically improved our students' engagement in subjects like history and civics. They're no longer just memorizing, they're participating."</p>
+                    <div class="author">- Anjali Sharma, School Principal</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Siksha Sarthi. All rights reserved. | Contact us: info@sikshasarthi.com</p>
+    </footer>
+
+</body>
+</html>

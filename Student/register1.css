@@ -1,0 +1,133 @@
+/* ====================================
+   Variables (Simplified to match login.css)
+   ==================================== */
+:root {
+    --primary-color: #5c67f2;
+    --secondary-color: #4a54e1;
+    --background-color: #f0f2f5;
+    --card-background: #fff;
+    --text-color: #333;
+    --input-border: #ddd;
+    --input-text: #1b1919;
+    --input-placeholder: #aaa;
+    --error-color: #e74c3c;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+/* ====================================
+   Base Styles
+   ==================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* ====================================
+   Registration Form Container
+   ==================================== */
+.register-container {
+    background: var(--card-background);
+    border-radius: 10px;
+    padding: 40px;
+    width: 100%;
+    max-width: 400px; /* Aligned with login-container's max-width */
+    box-shadow: 0 4px 15px var(--shadow-color);
+    text-align: center; /* Center the content inside the card */
+}
+
+.register-form h2 {
+    font-weight: normal;
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--text-color);
+    font-size: 2rem;
+}
+
+/* ====================================
+   Form Elements
+   ==================================== */
+.input-group {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--input-border);
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 5px 0; /* Adjusted padding to fit the group */
+    background: transparent; /* Changed to transparent to match login style */
+    border: none;
+    outline: none;
+    flex: 1;
+    color: var(--input-text);
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.input-group input::placeholder {
+    color: var(--input-placeholder);
+}
+
+.register-button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 5px; /* Aligned with login button */
+    font-size: 16px; /* Aligned with login button */
+    font-weight: normal; /* Aligned with login button */
+    color: #fff;
+    background-color: var(--primary-color);
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-shadow: none; /* Removed complex shadow to match login style */
+    transform: none; /* Removed complex transform to match login style */
+}
+
+.register-button:hover {
+    background-color: var(--secondary-color);
+}
+
+.terms-group {
+    display: flex;
+    justify-content: center; /* Center the terms group */
+    align-items: center;
+    margin-bottom: 25px;
+    font-size: 0.9rem;
+}
+
+.terms-group input {
+    margin-right: 10px;
+    accent-color: var(--primary-color);
+}
+
+.terms-link, .login-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: normal;
+    transition: color 0.3s ease;
+}
+
+.terms-link:hover, .login-link:hover {
+    color: var(--secondary-color);
+}
+
+.login-redirect {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 0.9rem;
+}

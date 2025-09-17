@@ -1,0 +1,132 @@
+:root {
+    --primary-color: #4CAF50; /* A green for growth and nature */
+    --secondary-color: #FFC107; /* A bright yellow for a positive feel */
+    --tertiary-color: #2196F3; /* A calming blue */
+    --quaternary-color: #FF5722; /* A warm orange for excitement */
+    --background-color: #f4f7f6;
+    --sidebar-bg: #fff;
+    --text-color: #333;
+    --card-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.sidebar {
+    width: 250px;
+    background-color: var(--sidebar-bg);
+    padding: 20px;
+    box-shadow: var(--card-shadow);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.logo h2 {
+    color: var(--primary-color);
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+}
+
+.nav-links li a {
+    display: block;
+    padding: 15px;
+    color: #666;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-links li.active a, .nav-links li a:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 40px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+.user-info span {
+    margin-right: 15px;
+    font-weight: 600;
+}
+
+.profile-pic {
+    border-radius: 50%;
+    border: 2px solid var(--primary-color);
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: var(--card-shadow);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card h3 {
+    margin-top: 0;
+    font-weight: 600;
+}
+
+.metric {
+    font-size: 2.5em;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.card-primary { border-left: 5px solid var(--primary-color); }
+.card-secondary { border-left: 5px solid var(--secondary-color); }
+.card-tertiary { border-left: 5px solid var(--tertiary-color); }
+.card-quaternary { border-left: 5px solid var(--quaternary-color); }
+
+.progress-section {
+    margin-top: 40px;
+}
+
+.chart-container {
+    height: 300px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: var(--card-shadow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #999;
+}

@@ -1,0 +1,131 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Panel</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="attendance-container">
+        <header class="panel-header">
+            <h1 class="panel-title">Class Attendance</h1>
+            <div class="date-info">
+                <span>Date:</span>
+                <span id="current-date">October 26, 2023</span>
+            </div>
+        </header>
+
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Student Name</th>
+                        <th class="status-header">Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="student-row">
+                        <td class="student-name">Aarav Patel</td>
+                        <td class="attendance-status">
+                            <input type="checkbox" id="aarav" class="status-checkbox" checked>
+                            <label for="aarav" class="status-label">
+                                <span class="label-text">Present</span>
+                            </label>
+                        </td>
+                    </tr>
+                    <tr class="student-row">
+                        <td class="student-name">Pooja Sharma</td>
+                        <td class="attendance-status">
+                            <input type="checkbox" id="pooja" class="status-checkbox">
+                            <label for="pooja" class="status-label">
+                                <span class="label-text">Absent</span>
+                            </label>
+                        </td>
+                    </tr>
+                    <tr class="student-row">
+                        <td class="student-name">Rahul Singh</td>
+                        <td class="attendance-status">
+                            <input type="checkbox" id="rahul" class="status-checkbox" checked>
+                            <label for="rahul" class="status-label">
+                                <span class="label-text">Present</span>
+                            </label>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="action-buttons">
+            <button class="save-button">Save Attendance</button>
+        </div>
+    </div>
+
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gamified Attendance Panel</title>
+    <link rel="stylesheet" href="onilne.att.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="attendance-container">
+        <header class="panel-header">
+            <h1 class="panel-title">Daily Attendance 🗓️</h1>
+            <div class="date-info">
+                <span>Today's Date:</span>
+                <span id="current-date">October 26, 2023</span>
+            </div>
+        </header>
+
+        <div class="table-wrapper">
+            <table class="attendance-table">
+                <thead>
+                    <tr>
+                        <th class="student-col">Student Name</th>
+                        <th class="status-col">Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="student-row">
+                        <td class="student-name">Aarav Patel</td>
+                        <td class="attendance-status">
+                            <input type="checkbox" id="aarav" class="status-checkbox" checked>
+                            <label for="aarav" class="status-label">Present</label>
+                        </td>
+                    </tr>
+                    <tr class="student-row">
+                        <td class="student-name">Pooja Sharma</td>
+                        <td class="attendance-status">
+                            <input type="checkbox" id="pooja" class="status-checkbox">
+                            <label for="pooja" class="status-label">Absent</label>
+                        </td>
+                    </tr>
+                    <tr class="student-row">
+                        <td class="student-name">Rahul Singh</td>
+                        <td class="attendance-status">
+                            <input type="checkbox" id="rahul" class="status-checkbox" checked>
+                            <label for="rahul" class="status-label">Present</label>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="action-buttons">
+            <button class="save-button">
+                <span class="button-text">Save Attendance</span>
+                <span class="icon">💾</span>
+            </button>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Upload Content</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <h2>Upload Content</h2>
+    <div class="header-actions">
+      <button onclick="location.href='index.html'"> Back to Dashboard</button>
+    </div>
+  </header>
+
+  <main class="content">
+    <form class="form-card" enctype="multipart/form-data">
+      <label>Title</label>
+      <input type="text" placeholder="Enter content title">
+
+      <label>Upload File (PDF, Image, Video)</label>
+      <input type="file" accept=".pdf,.jpg,.png,.mp4,.avi">
+
+      <button type="submit">Upload</button>
+    </form>
+    
+  </main>
+</body>
+</html>

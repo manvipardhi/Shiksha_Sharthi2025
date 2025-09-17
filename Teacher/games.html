@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Games - Teacher Dashboard</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="games.css">
+</head>
+<body>
+  <header>
+    <h2 style=" text-align: center ;font-size: larger; color: rgb(81, 222, 222) ;">🎮 Fun Learning Games</h2>
+    <p>Solve level-based games in Chemistry, Physics, and Maths!</p>
+  </header>
+
+  <main>
+    <!-- Chemistry Game -->
+    <section class="game-card">
+      <h3>⚗️ Chemistry Game</h3>
+      <div id="chem-game"></div>
+      <p id="chem-result"></p>
+    </section>
+
+    <!-- Physics Game -->
+    <section class="game-card">
+      <h3>⚡ Physics Game</h3>
+      <div id="phy-game"></div>
+      <p id="phy-result"></p>
+    </section>
+
+    <!-- Maths Game -->
+    <section class="game-card">
+      <h3>➗ Maths Game</h3>
+      <div id="math-game"></div>
+      <p id="math-result"></p>
+    </section>
+  </main>
+
+  <section class="leaderboard">
+    <h3>🏆 Leaderboard</h3>
+    <ul id="leaderboard-list"></ul>
+  </section>
+<div style="margin: 50px; ;" class="header-actions">
+      <button  style="background-color: rgb(6, 84, 84);" onclick="location.href='index.html'"> Back to Dashboard</button>
+    </div>
+  <script src="games.js"></script>
+</body>
+</html>
